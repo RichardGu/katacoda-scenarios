@@ -10,17 +10,31 @@
     }],
     "intro": {
       "text": "intro.md",
+      "code": "env-init.sh",
       "credits": ""
     },
     "finish": {
       "text": "finish.md"
+    },
+    "assets": {
+      "host01": [
+        {"file": "*", "target": "/root"}      ]
     }
   },
   "environment": {
-    "uilayout": "terminal",
-    "uimessage1": "\u001b[32mYour Interactive Bash Terminal.\r\nStart Kubernetes using `launch.sh`\u001b[m\r\n"
+    "uilayout": "terminal"
   },
+  "environment": {
+    "showdashboard": true,
+    "uilayout": "terminal",
+    "uimessage1": "\u001b[32mYour interactive Bash terminal.\u001b[m\r\n",
+    "icon": "fa-kubernetes",
+    "dashboards": [
+      {"name": "Kubernetes Dashboard", "port": 30000}
+    ]
+    },
   "backend": {
     "imageid": "minikube"
   }
+
 }
