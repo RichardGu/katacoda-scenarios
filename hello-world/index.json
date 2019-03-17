@@ -18,7 +18,9 @@
     },
     "assets": {
       "host01": [
-        {"file": "*", "target": "/root"}      ]
+        {"file": "*", "target": "/root"},
+        {"file": "launch.sh", "target": "/usr/bin/", "chmod": "+x"}
+      ]
     }
   },
   "environment": {
@@ -34,7 +36,8 @@
     ]
     },
   "backend": {
-    "imageid": "kubernetes-cluster"
+    "port": 8080,
+    "imageid": "kubernetes-cluster-running"
   }
 
 }
